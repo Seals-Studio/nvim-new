@@ -6,6 +6,31 @@ local M = {
 }
 
 function M.config()
+  local wk = require "which-key"
+
+  wk.add {
+    {
+      "<leader>bh",
+      "<cmd>BufferLineCloseLeft<CR>",
+      desc = "Close left",
+    },
+    {
+      "<leader>bl",
+      "<cmd>BufferLineCloseRight<CR>",
+      desc = "Close right",
+    },
+    {
+      "<leader>bo",
+      "<cmd>BufferLineCloseRight<cr><cmd>BufferLineCloseLeft<CR>",
+      desc = "Close other",
+    },
+    {
+      "<leader>bc",
+      "<cmd>BufferLinePickClose<CR>",
+      desc = "Close selected",
+    },
+  }
+
   vim.opt.termguicolors = true
   require("bufferline").setup{
     options = {

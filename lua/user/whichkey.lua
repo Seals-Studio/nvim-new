@@ -128,6 +128,10 @@ function M.config()
       group = "Plugins",
     },
     {
+      "<leader>s",
+      group = "Session",
+    },
+    {
       "<leader>t",
       group = "Test",
     },

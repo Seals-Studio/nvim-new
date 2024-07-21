@@ -21,6 +21,8 @@ function M.config()
   local keymap = vim.api.nvim_set_keymap
 
   keymap("n", "<c-p>", ":lua require('telescope').extensions.projects.projects()<CR>", opts)
+
+  require('telescope').load_extension('projects')
 end
 
 return M
