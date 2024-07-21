@@ -45,7 +45,8 @@ function M.config()
   end
   require("auto-session").setup {
     log_level = vim.log.levels.ERROR,
-    auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
+    -- auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
+    auto_session_suppress_dirs = { os.getenv "HOME", },
     auto_session_use_git_branch = false,
     auto_session_root_dir = vim.fn.stdpath "data" .. "/sessions/",
     auto_session_enable_last_session = false,
