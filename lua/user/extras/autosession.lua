@@ -30,6 +30,19 @@ function M.config()
   -- }
   --
   -- auto_session.setup(opts)
+  local function restore_nvim_tree()
+    local nvim_tree = require('nvim-tree')
+    nvim_tree.change_dir(vim.fn.getcwd())
+    nvim_tree.refresh()
+  end
+  local function open_nvim_tree()
+    local nvim_tree = require('nvim-tree')
+    nvim_tree.open()
+  end
+  local function close_nvim_tree()
+    local nvim_tree = require('nvim-tree')
+    nvim_tree.close()
+  end
   require("auto-session").setup {
     log_level = vim.log.levels.ERROR,
     auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
@@ -45,6 +58,16 @@ function M.config()
       load_on_setup = true,
       theme_conf = { border = true },
       previewer = false,
+    },
+
+    pre_save_cmds = { close_nvim_tree },
+    post_save_cmds = { open_nvim_tree },
+    cwd_change_handling = {
+      restore_upcoming_session = true, -- Disabled by default, set to true to enable
+      pre_cwd_changed_hook = nil, -- already the default, no need to specify like this, only here as an example
+      post_cwd_changed_hook = function() -- example refreshing the lualine status line _after_ the cwd changes
+        require("lualine").refresh() -- refresh lualine so the new session name is displayed in the status bar
+      end,
     },
   }
 
