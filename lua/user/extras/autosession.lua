@@ -79,9 +79,9 @@ function M.config()
     log_level = vim.log.levels.ERROR,
     auto_session_suppress_dirs = { "~/", "~/Downloads", "/" },
     -- auto_session_suppress_dirs = { os.getenv "HOME", },
-    auto_session_use_git_branch = false,
+    auto_session_use_git_branch = nil,
     auto_session_root_dir = vim.fn.stdpath "data" .. "/sessions/",
-    auto_session_enable_last_session = true,
+    auto_session_enable_last_session = false,
     bypass_session_save_file_types = { "alpha" },
 
     -- ⚠️ This will only work if Telescope.nvim is installed
@@ -95,10 +95,12 @@ function M.config()
 
     -- 自动打开目录树
     pre_save_cmds = {"tabdo Neotree close"},
-    post_restore_cmds = {"tabdo Neotree show"}
-
+    post_restore_cmds = {"tabdo Neotree show"},
+    post_save_cmds = {"tabdo Neotree show"},
+    post_open_cmds = {"tabdo Neotree show"},
     -- pre_save_cmds = { close_nvim_tree },
     -- post_save_cmds = { open_nvim_tree },
+
     -- cwd_change_handling = {
     --   restore_upcoming_session = true, -- Disabled by default, set to true to enable
     --   pre_cwd_changed_hook = nil, -- already the default, no need to specify like this, only here as an example
