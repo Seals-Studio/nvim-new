@@ -18,17 +18,17 @@ function M.config()
     },
     {
       "<leader>sr",
-      "<cmd>RestoreSession<CR>",
+      "<cmd>SessionRestore<CR>",
       desc = "Restore",
     },
     {
       "<leader>ss",
-      "<cmd>SaveSession<CR>",
+      "<cmd>SessionSave<CR>",
       desc = "Save",
     },
     {
       "<leader>sx",
-      "<cmd>DeleteSession<CR>",
+      "<cmd>SessionDelete<CR>",
       desc = "Delete",
     },
   }
