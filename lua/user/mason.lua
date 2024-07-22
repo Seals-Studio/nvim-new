@@ -20,6 +20,9 @@ M.execs = {
   "tailwindcss",
   "rust_analyzer",
   "eslint",
+  "jdtls",
+  "clangd",
+  "volar"
 }
 
 function M.config()
