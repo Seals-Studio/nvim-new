@@ -190,6 +190,15 @@ function M.config()
   -- vim.api.nvim_set_keymap("n", "<leader>gz", "<cmd>lua _lazygit_toggle()<CR>", { noremap = true, silent = true })
   -- vim.api.nvim_set_keymap("n", "<leader>co", "<cmd>lua _bun_outdated()<CR>", { noremap = true, silent = true })
   -- vim.api.nvim_set_keymap("n", "<leader>cr", "<cmd>lua _cargo_run()<CR>", { noremap = true, silent = true })
+
+  local wk = require "which-key"
+  wk.add {
+    {
+      "<leader>gg",
+      "<cmd>lua _lazygit_toggle()<CR>",
+      desc = "Lazygit",
+    },
+  }
 end
 
 return M
