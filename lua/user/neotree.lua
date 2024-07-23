@@ -108,7 +108,7 @@ function M.config()
     },
     window = {
       position = "left",
-      width = 35,
+      width = 60,
       mappings = {
         ["l"] = "open",
         ["h"] = "close_node",

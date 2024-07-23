@@ -49,3 +49,9 @@ keymap({ "n" }, "<s-h>", "<cmd>tabp<cr>", opts)
 keymap({ "n" }, "<s-l>", "<cmd>tabn<cr>", opts)
 
 vim.api.nvim_set_keymap("t", "<C-;>", "<C-\\><C-n>", opts)
+
+-- resize
+keymap("n", "<C-Up>", ":resize -2<CR>", opts)
+keymap("n", "<C-Down>", ":resize +2<CR>", opts)
+keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
+keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
