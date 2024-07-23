@@ -38,6 +38,7 @@ spec "user.toggleterm"
 spec "user.bufdelete"
 spec "user.luarocks"
 -- spec "user.image"
+spec "user.flash"
 -- Extras
 spec "user.extras.notify"
 spec "user.extras.colorizer"
