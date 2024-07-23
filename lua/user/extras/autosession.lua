@@ -81,7 +81,7 @@ function M.config()
     -- auto_session_suppress_dirs = { os.getenv "HOME", },
     auto_session_use_git_branch = nil,
     auto_session_root_dir = vim.fn.stdpath "data" .. "/sessions/",
-    auto_session_enable_last_session = false,
+    auto_session_enable_last_session = vim.fn.has("windows") == 0,
     bypass_session_save_file_types = { "alpha" },
 
     -- ⚠️ This will only work if Telescope.nvim is installed
