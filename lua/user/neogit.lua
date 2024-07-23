@@ -10,7 +10,7 @@ function M.config()
 
   wk.add {
     {
-      "<leader>gg",
+      "<leader>gG",
       "<cmd>Neogit<CR>",
       desc = "Neogit",
     },
