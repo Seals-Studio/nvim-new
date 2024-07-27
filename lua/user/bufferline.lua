@@ -21,7 +21,7 @@ function M.config()
     },
     {
       "<leader>bo",
-      "<cmd>BufferLineCloseRight<cr><cmd>BufferLineCloseLeft<CR>",
+      "<cmd>BufferLineCloseOthers<CR>",
       desc = "Close other",
     },
     {
