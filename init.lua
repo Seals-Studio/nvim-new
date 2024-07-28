@@ -39,6 +39,7 @@ spec "user.bufdelete"
 spec "user.luarocks"
 -- spec "user.image"
 spec "user.flash"
+spec "user.spectre"
 -- Extras
 spec "user.extras.notify"
 spec "user.extras.colorizer"
