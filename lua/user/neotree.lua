@@ -9,14 +9,34 @@ local M = {
 }
 
 function M.config()
-  local wk = require "which-key"
+  local is_win = vim.fn.has("win32") == 1 or vim.fn.has("win64") == 1
+  local is_mac = vim.fn.has("macunix") == 1
+  local is_linux = vim.fn.has("unix") == 1 and not is_mac
+  function OpenFileExplorer()
+    local current_dir = vim.fn.expand('%:p:h')
+    if is_win then
+      vim.cmd('!explorer ' .. current_dir)
+    elseif is_mac then
+      vim.cmd('!open ' .. current_dir)
+    elseif is_linux then
+      vim.cmd('!xdg-open ' .. current_dir)
+    else
+      vim.notify "Unsupported system"
+    end
+  end
 
+  local wk = require "which-key"
   wk.add {
     {
       "<leader>e",
       "<cmd>Neotree toggle<CR>",
       desc = "Explorer",
       hidden = true,
+    },
+    {
+      "<leader>fo",
+      "<cmd>lua OpenFileExplorer()<CR><CR>",
+      desc = "Open Outer Dir",
     },
   }
 
