@@ -11,7 +11,12 @@ function M.config()
     light_style = 'day',
     styles = {
       sidebars = 'transparent',
-    }
+    },
+    on_highlights = function(hl, c)
+      hl.Visual = {
+        bg = c.red,
+      }
+    end
   }
   vim.cmd.colorscheme "tokyonight"
 end
