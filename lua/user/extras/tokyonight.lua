@@ -6,7 +6,14 @@ local M = {
 }
 
 function M.config()
-  -- vim.cmd.colorscheme "tokyonight-night"
+  require("tokyonight").setup {
+    style = 'night',
+    light_style = 'day',
+    styles = {
+      sidebars = 'transparent',
+    }
+  }
+  vim.cmd.colorscheme "tokyonight"
 end
 
 return M

@@ -19,7 +19,7 @@ function M.config()
   -- github_light_high_contrast
   -- github_light_colorblind
   -- github_light_tritanopia
-  vim.cmd "colorscheme github_dark_dimmed"
+  -- vim.cmd "colorscheme github_dark_dimmed"
 end
 
 return M

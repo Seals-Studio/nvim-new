@@ -13,6 +13,9 @@ local M = {
   },
 }
 
-function M.config() end
+function M.config()
+  -- vim.api.nvim_set_hl(0, 'FlashBackdrop', { fg = "#545c7e" })
+  -- vim.api.nvim_set_hl(0, 'FlashLabel', { fg = "#c0caf5", bg = "#ff007c", bold = true })
+end
 
 return M
