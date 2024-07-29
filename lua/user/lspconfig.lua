@@ -135,6 +135,7 @@ function M.config()
     "templ",
     -- "nginx-language-server",
     -- "rust_analyzer",
+    "jdtls",
   }
 
   vim.diagnostic.config {
