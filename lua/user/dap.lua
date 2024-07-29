@@ -11,8 +11,22 @@ local M = {
   },
 }
 function M.config()
-  local wk = require "which-key"
+  require("dapui").setup()
+  -- dap.configurations.java = {
+  --   {
+  --     javaExec = "/Library/Java/JavaVirtualMachines/jdk-1.8.jdk/Contents/Home/bin/java",
+  --     type = "java",
+  --     request = "launch",
+  --   },
+  -- }
+  -- dap.adapters.java = {
+  --   type = "server",
+  --   host = "127.0.0.1",
+  --   port = "8080",
+  -- }
 
+
+  local wk = require "which-key"
   wk.add {
     {
       "<leader>dt",
