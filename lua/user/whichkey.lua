@@ -135,6 +135,10 @@ function M.config()
       "<leader>t",
       group = "Test",
     },
+    {
+      "<leader>H",
+      group = "Harpoon",
+    },
     -- {
     --   "<leader>a",
     --   name = "Tab",
