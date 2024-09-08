@@ -22,6 +22,7 @@ M.execs = {
   "eslint",
   "jdtls",
   "clangd",
+  "clang-format",
   "volar"
 }
 
