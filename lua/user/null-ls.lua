@@ -15,6 +15,7 @@ function M.config()
       formatting.prettier,
       formatting.black,
       formatting.shfmt,
+      formatting.clang_format,
 
       -- diagnostics.shellcheck,
 
