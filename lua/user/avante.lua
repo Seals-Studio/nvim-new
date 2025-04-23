@@ -61,6 +61,7 @@ local M = {
 }
 
 function M.config()
+  require("avante").setup({})
 end
 
 return M
