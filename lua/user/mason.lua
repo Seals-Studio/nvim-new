@@ -22,7 +22,7 @@ M.execs = {
   "eslint",
   "jdtls",
   "clangd",
-  "volar"
+  "vue_ls",
 }
 
 function M.config()
